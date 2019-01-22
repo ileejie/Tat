@@ -17,29 +17,29 @@ export default new Router({
       component: Welcome
     },
     {
-      path: '/register',
+      path: 'register',
       name: 'register',
       component: Register
     },
     {
-      path: '/login',
+      path: 'login',
       name: 'login',
       component: Login
     },
     {
-      path: '/index',
+      path: 'index',
       name: 'index',
-      component: Index
+      component: Index,
+      children: {
+        path: '/child/child',
+        name: 'child',
+        component: Child
+      }
     },
     {
-      path: '/success',
+      path: 'success',
       name: 'success',
       component: Success
-    },
-    {
-      path: '/child/child',
-      name: 'child',
-      component: Child
     }
   ]
 });
